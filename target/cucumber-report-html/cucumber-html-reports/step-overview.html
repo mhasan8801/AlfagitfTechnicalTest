@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/reporting.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber-JVM Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber-JVM Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="feature-overview.html">Features</a></li>
+        <li role="presentation" ><a href="tag-overview.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="step-overview.html">Steps</a></li>
+        <li role="presentation" ><a href="failures-overview.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid" id="build-info">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-1">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Project</th>
+                          <th>Number</th>
+                        <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="info">
+            <td>Alfagift Version V.4.37.0</td>
+                          <td>1</td>
+                        <td>22 Mar 2025, 18:26</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="report-lead" class="container-fluid>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2>Steps Statistics</h2>
+              <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+          </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="summary">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+              <table id="tablesorter" class="stats-table table-hover">
+
+          <thead>
+            <tr class="header">
+              <th>Implementation</th>
+              <th>Occurrences</th>
+              <th>Duration</th>
+              <th>Average</th>
+              <th>Ratio</th>
+            </tr>
+          </thead>
+
+          <tbody>
+                          <tr>
+                <td class="location">com.test.hooks.Hooks.before(io.cucumber.java.Scenario)</td>
+                <td>15</td>
+                <td class="duration" data-value="2953000">002ms</td>
+                <td class="duration" data-value="196866">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">com.test.hooks.Hooks.setupDeviceCapabilities()</td>
+                <td>15</td>
+                <td class="duration" data-value="177616367000">2m 57s 616ms</td>
+                <td class="duration" data-value="11841091133">11s 841ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">com.test.hooks.Hooks.stopAndroidDriver()</td>
+                <td>15</td>
+                <td class="duration" data-value="56830472000">56s 830ms</td>
+                <td class="duration" data-value="3788698133">3s 788ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">com.test.hooks.Hooks.tearDown(io.cucumber.java.Scenario)</td>
+                <td>15</td>
+                <td class="duration" data-value="3955000">003ms</td>
+                <td class="duration" data-value="263666">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">com.test.stepdef.test.LoginStep.alreadyOnResetPasswordPage()</td>
+                <td>1</td>
+                <td class="duration" data-value="1995063000">1s 995ms</td>
+                <td class="duration" data-value="1995063000">1s 995ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">com.test.stepdef.test.LoginStep.alreadyOnSignUpPage()</td>
+                <td>1</td>
+                <td class="duration" data-value="1484756000">1s 484ms</td>
+                <td class="duration" data-value="1484756000">1s 484ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">com.test.stepdef.test.LoginStep.clickButtonOnLogin(java.lang.String)</td>
+                <td>12</td>
+                <td class="duration" data-value="27268385000">27s 268ms</td>
+                <td class="duration" data-value="2272365416">2s 272ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">com.test.stepdef.test.LoginStep.clickButtonOnMain(java.lang.String)</td>
+                <td>15</td>
+                <td class="duration" data-value="21614464000">21s 614ms</td>
+                <td class="duration" data-value="1440964266">1s 440ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">com.test.stepdef.test.LoginStep.clickLabelOnLogin(java.lang.String)</td>
+                <td>2</td>
+                <td class="duration" data-value="5767026000">5s 767ms</td>
+                <td class="duration" data-value="2883513000">2s 883ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">com.test.stepdef.test.LoginStep.errorInPassword(java.lang.String)</td>
+                <td>6</td>
+                <td class="duration" data-value="4226406000">4s 226ms</td>
+                <td class="duration" data-value="704401000">704ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">com.test.stepdef.test.LoginStep.errorInPhoneNumber(java.lang.String)</td>
+                <td>4</td>
+                <td class="duration" data-value="1175942000">1s 175ms</td>
+                <td class="duration" data-value="293985500">293ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">com.test.stepdef.test.LoginStep.inputPassword(java.lang.String)</td>
+                <td>11</td>
+                <td class="duration" data-value="15633758000">15s 633ms</td>
+                <td class="duration" data-value="1421250727">1s 421ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">com.test.stepdef.test.LoginStep.inputPhoneNumber(java.lang.String)</td>
+                <td>11</td>
+                <td class="duration" data-value="25481319000">25s 481ms</td>
+                <td class="duration" data-value="2316483545">2s 316ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">com.test.stepdef.test.LoginStep.loginFailedWithAnotherAccount()</td>
+                <td>3</td>
+                <td class="duration" data-value="5371362000">5s 371ms</td>
+                <td class="duration" data-value="1790454000">1s 790ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">com.test.stepdef.test.LoginStep.openApp()</td>
+                <td>15</td>
+                <td class="duration" data-value="272076800000">4m 32s 076ms</td>
+                <td class="duration" data-value="18138453333">18s 138ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">com.test.stepdef.test.LoginStep.verifyFunctionalityHidePassword(java.lang.String)</td>
+                <td>1</td>
+                <td class="duration" data-value="908178000">908ms</td>
+                <td class="duration" data-value="908178000">908ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">com.test.stepdef.test.LoginStep.verifyFunctionalityShowPassword(java.lang.String)</td>
+                <td>1</td>
+                <td class="duration" data-value="1444681000">1s 444ms</td>
+                <td class="duration" data-value="1444681000">1s 444ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">com.test.stepdef.test.LoginStep.verifySuccessfullyLogin()</td>
+                <td>2</td>
+                <td class="duration" data-value="29599954000">29s 599ms</td>
+                <td class="duration" data-value="14799977000">14s 799ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                      </tbody>
+
+          <tfoot class="total">
+            <tr>
+              <td>18</td>
+              <td>145</td>
+              <td class="duration">10m 48s 501ms</td>
+              <td class="duration">4s 472ms</td>
+              <td>Totals</td>
+            </tr>
+          </tfoot>
+
+        </table>
+          </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

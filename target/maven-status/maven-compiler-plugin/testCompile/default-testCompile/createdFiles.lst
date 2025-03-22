@@ -1,0 +1,5 @@
+com/test/stepdef/test/LoginStep.class
+com/test/stepdef/test/TestStep.class
+com/test/hooks/Hooks.class
+com/test/runners/RunCukesTest.class
+com/test/stepdef/base/BaseStep.class
